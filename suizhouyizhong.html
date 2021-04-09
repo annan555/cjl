@@ -1,0 +1,564 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/01.css" />
+	<style>
+		.news_box_img img {
+			width: 168px;
+			height: 112px;
+			float: left;
+		}
+
+
+		.news_box_img h5 {
+			float: right;
+			width: 190px;
+			margin: 0;
+			padding: 0;
+			font-size: 15px;
+			font-weight: 400;
+		}
+
+		.news_box_img p {
+			float: right;
+			width: 190px;
+			margin: 5px 0;
+			line-height: 21px;
+			color: #666;
+		}
+
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+
+		p {
+			display: block;
+			margin-block-start: 1em;
+			margin-block-end: 1em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+		}
+	</style>
+	<script>
+		function time() {
+			//获得显示时间的div
+			var t_div = document.getElementById('showtime');
+			var now = new Date()
+			//替换div内容 
+			t_div.innerHTML = "今天是" + now.getFullYear()
+				+ "年" + (now.getMonth() + 1) + "月" + now.getDate()
+				+ "日" + now.getHours() + "时" + now.getMinutes()
+				+ "分" + now.getSeconds() + "秒";
+			//等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
+			setTimeout(time, 1000);
+		}
+		$(function () {
+			time();
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div>
+			<div class="col-12 my_bg1 text-white" style="width: 100%;margin-left: 15px;">
+				<span class="ml-5 ">欢迎登陆湖北随州一中网站！</span>
+				<span class="float-right mr-5 " id="showtime"></span>
+			</div>
+			<div class="col-12">
+				<a href="#"><img style="width: 100%;" src="img/2020-12-18_182813.png"></a>
+			</div>
+			<div style="margin-left: 101px;">
+				<ul class="col-12 nav">
+					<li class="nav-link aaa"><a href="#">学习概况</a>
+						<div>
+							<div>学校简介</div>
+							<div>历任领导</div>
+							<div>学校沿革</div>
+							<div>组织机构</div>
+							<div>校园风光</div>
+							<div>现任领导</div>
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">新闻头条</a>
+
+						<div>
+							<div>头条新闻</div>
+							<div>今日学校</div>
+
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">党建政务</a>
+						<div>
+							<div>党建工作</div>
+							<div>政务公开</div>
+
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">师资队伍</a>
+						<div>
+							<div>师资介绍</div>
+							<div>湖北名师</div>
+							<div>特级教师</div>
+
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">教学教研</a>
+						<div>
+							<div>教学前言</div>
+							<div>教师工作</div>
+							<div>教师论文</div>
+
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">名师工作室</a>
+						<div>
+							<div>名师工作</div>
+							<div>团委工作</div>
+
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">德育天地</a>
+						<div>
+							<div>校纪校规</div>
+							<div>团委工作</div>
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">年级动态</a>
+						<div>
+							<div>高一班级</div>
+							<div>高二班级</div>
+							<div>高三班级</div>
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">后勤服务</a>
+						<div>
+							<div>后勤服务</div>
+
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">校友风采</a>
+						<div>
+							<div>校友风采</div>
+						</div>
+					</li>
+					<li class="nav-link aaa"><a href="#">招生招聘</a>
+						<div>
+							<div>招生毕业</div>
+							<div>教师招聘</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="container-fluid">
+				<div id="demo" class="carousel" data-ride="carousel">
+					<!-- 1.轮播的图片 -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+
+							<img style="width: 1100px;height: 279.69px;" class="w-100" src="img/flash.jpg">
+						</div>
+						<div class="carousel-item">
+							<img style="width: 1100px;height: 279.69px;" class="w-100" src="img/timg.jpg">
+						</div>
+
+					</div>
+					<!-- 2.轮播指示器 -->
+					<ul class="carousel-indicators">
+						<li data-target="#demo" data-slide-to="0" class="active"></li>
+						<li data-target="#demo" data-slide-to="1"></li>
+
+					</ul>
+					<!-- 3.左右箭头 -->
+					<a data-slide="prev" href="#demo" class="carousel-control-prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a data-slide="next" href="#demo" class="carousel-control-next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+			</div>
+			<div class="row no-gutters container mt-5" style="margin:0 100px;">
+				<div class="row ml-5">
+				<div class="col-4">
+
+					<ul class="title_box">
+						<li class="title_h3">学校概况</li>
+						<li class="title_more"><a href="#" title="教学教研">更多>></a></li>
+					</ul>
+
+					随州一中创办于1934年秋，时为湖北国民政府主席何成浚先生的私立列山中学，张学良、何应钦、阎锡山等当时社会名流曾为建校捐资。著名翻译家、文学家、《安徒生童话全集》的翻译者叶君健先生曾在学校执教。“诚朴洁勤、发奋为雄”的校训始终鼓舞着5万多名毕业生和在校学生。
+
+					随州一中建校75年，经过几代一中人的拼搏奋斗现已发展为“省级最佳文明单位”和“省级示范高中”，先后获得“全国群众体育先进集体”、“全国施行体育锻炼标准先进单位”、“全省安全文明校园”、“全省教育科研50强学校”...
+				</div>
+				<div class="col-4 pl-2">
+					<ul class="title_box">
+						<li class="title_h3">新闻头条</li>
+						<li class="title_more"><a href="#" title="教学教研">更多>></a></li>
+					</ul>
+					<img class="w-100" src="img/2020112453753117.jpg">
+				</div>
+				<div class="col-4 pl-2">
+
+					<ul class="title_box ">
+						<li class="title_h3">通知公告</li>
+						<li class="title_more"><a href="#" title="教学教研">更多>></a></li>
+					</ul>
+					<ul>
+						<li><a href="#">随州一中高一新生录取名单</a></li>
+						<li><a href="#">关于学校复学复课相关工作的通告</a></li>
+						<li><a href="#">中国工程院院士龙乐豪来到随州一中</a></li>
+						<li><a href="#">随州一中多名学生获全国竞赛一等奖</a></li>
+						<li><a href="#">中共随州市第一中学关于…</a></li>
+						<li><a href="#">关于表彰2018学年度先进集体和先进个人</a></li>
+						<li><a href="#">市招考办关于2018年中考招生录取批次分数</a></li>
+						<li><a href="#">关于在全校实行全员育人导师制的通知</a></li>
+						<li><a href="#">市招考办关于2018年中考招生录取批次分数</a></li>
+						<li><a href="#">关于在全校实行全员育人导师制的通知</a></li>
+					</ul>
+				</div>
+				</div>
+				<div class="main">
+					<div class="i_ad">
+
+						<a href="#" title="第一条广告"><img src="img/banner01.jpg" width="1200" height="112" /></a>
+
+					</div>
+
+					<div class="news_box">
+						<ul class="title_box">
+							<li class="title_h3">党建政务</li>
+							<li class="title_more"><a href="#" 党建政务">更多>></a></li>
+						</ul>
+						<ul class="news_box_c">
+							<li class="news_box_img">
+								<img src="img/2020112060367641.jpg" />
+								<h5><a href="#" title="做好“三个强化”，夯实“三篇文章”">做好“三个强化”，夯实…</a></h5>
+								<p>教育局党组成员、副局长、直属机关党委书记胡华洲对我校党建工作标准化、规范化、常态化建设给予了充分肯定，并对我校…</p>
+
+							</li>
+
+
+
+							<li class="news_box_cc"><a href="#" title="做好“三个强化”，夯实“三篇文章”">[党建工作] 做好“三个强化”，夯实“三篇文章”</a>
+							</li>
+
+
+							<li class="news_box_cc"><a href="#" title="李建伟局长讲专题党课">[党建工作] 李建伟局长讲专题党课</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="关于印发《随州市第一中学第二十一个党风廉政建设宣传教育月活动实施方案》的通知">[党建工作]
+									关于印发《随州市第一中学第二十一个党风廉政建…</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="随州一中党员干部“廉洁好家风”倡议书">[党建政务] 随州一中党员干部“廉洁好家风”倡议书</a>
+							</li>
+
+
+							<li class="news_box_cc"><a href="#"
+									title="中共随州市纪委办公室关于印发《随州市纪委监委推进基层纪检监察工作规范化建设向市直单位延伸工作方案》的通知">[党建工作]
+									中共随州市纪委办公室关于印发《随州市纪委监委…</a></li>
+
+
+							<li class="news_box_cc"><a href="#"
+									title="市委市直机关工委关于开展 建设“五好党支部”争创“红旗党支部”活动的 实施办法（暂行）">[党建工作]
+									市委市直机关工委关于开展&nbsp;建设“五好党支部”争…</a></li>
+
+						</ul>
+					</div>
+
+					<div class="news_box">
+						<ul class="title_box">
+							<li class="title_h3">教学教研</li>
+							<li class="title_more"><a href="#" title="教学教研">更多>></a></li>
+						</ul>
+						<ul class="news_box_c">
+
+
+							<li class="news_box_img">
+								<img src="img/2020062930931717.jpg" />
+								<h5><a href="#" title="“语”你为伴，以“文”会友">“语”你为伴，以“文”…</a></h5>
+								<p>语文，是一场诗意的旅行。这场旅行当中，我们“语”你为伴，以“文”会友，一次又一次共赴那浪漫的三年之约。这场旅行…</p>
+							</li>
+
+
+
+							<li class="news_box_cc"><a href="#" title="“语”你为伴，以“文”会友">[学科建设] “语”你为伴，以“文”会友</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="青山着意化为桥，我们都是数学人">[学科建设] 青山着意化为桥，我们都是数学人</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="含“英”咀华，妙“语”生花">[学科建设] 含“英”咀华，妙“语”生花</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="格物致理 穷究自然奥妙，教书育人 培养世纪英才">[学科建设]
+									格物致理&nbsp;穷究自然奥妙，教书育人&nbsp;培养世纪英才…</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="唯物辩证，探索物质本源；政治经济，解说社会焦点">[学科建设]
+									唯物辩证，探索物质本源；政治经济，解说社会焦…</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="往事历历不是烟，史册明明即为镜">[学科建设] 往事历历不是烟，史册明明即为镜</a></li>
+
+						</ul>
+					</div>
+
+					<div class="news_box">
+						<ul class="title_box">
+							<li class="title_h3">名师工作室</li>
+							<li class="title_more"><a href="#" 名师工作室">更多>></a></li>
+						</ul>
+						<ul class="news_box_c">
+
+
+							<li class="news_box_img">
+								<img src="img/2020092838026165.jpg" />
+								<h5><a href="#" title="好风凭借力，扬帆正当时">好风凭借力，扬帆正当时…</a></h5>
+								<p>工作室工作应常抓不懈，再创新高，取得更多、更好的成果，真正起到示范引领作用。听取了各位领导专家的意见，沈主席表…</p>
+							</li>
+
+
+
+							<li class="news_box_cc"><a href="#" title="好风凭借力，扬帆正当时">[名师工作室活动] 好风凭借力，扬帆正当时</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="闵龙坤老师喜获全国典型课例奖">[名师工作室成果] 闵龙坤老师喜获全国典型课例奖</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="荟美文名篇习真知，萃文化理论聚一室">[名师工作室简介]
+									荟美文名篇习真知，萃文化理论聚一室</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="育心育德终无悔    向上向善矢志行">[名师工作室简介]
+									育心育德终无悔&nbsp;&nbsp;&nbsp;&nbsp;向上向善矢志行</a></li>
+
+							<li class="news_box_cc"><a href="#" title="名师工作室活动">[名师工作室活动] 名师工作室活动</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="工作室主要成果">[名师工作室成果] 工作室主要成果</a></li>
+
+						</ul>
+					</div>
+
+					<div class="news_box">
+						<ul class="title_box">
+							<li class="title_h3">德育天地</li>
+							<li class="title_more"><a href="#" title="德育天地">更多>></a></li>
+						</ul>
+						<ul class="news_box_c">
+							<li class="news_box_img">
+								<img src="img/2020060157808405.jpg" />
+								<h5><a href="#" title="铁肩担当显芳华">铁肩担当显芳华</a></h5>
+								<p>从业30余年来，随州市第一中学高级教师、高三实验班班主任刘方华始终以满腔的热忱投入到教育事业中，尤其是在抗疫期间…</p>
+							</li>
+
+
+
+							<li class="news_box_cc"><a href="#" title="铁肩担当显芳华">[班主任风采] 铁肩担当显芳华</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="2018年高考 我们在一起 -----随州一中2018届高考家长九颗米">[心灵港湾]
+									2018年高考&nbsp;我们在一起&nbsp;-----随州一中2018届高考…</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="愿你心中有光 走向锦绣繁花">[班主任风采] 愿你心中有光&nbsp;走向锦绣繁花</a>
+							</li>
+
+
+							<li class="news_box_cc"><a href="#" title="犇星公司爱心帮扶，助力学子修学业">[心灵港湾] 犇星公司爱心帮扶，助力学子修学业</a>
+							</li>
+
+
+							<li class="news_box_cc"><a href="#" title="随州一中关于进一步加强师德师风建设的意见">[校纪校规]
+									随州一中关于进一步加强师德师风建设的意见</a></li>
+
+
+							<li class="news_box_cc"><a href="#" title="青春正当时">[心灵港湾] 青春正当时</a></li>
+
+						</ul>
+					</div>
+
+					<div class="news_box">
+						<ul class="title_box">
+							<li class="title_h3">年级动态</li>
+							<li class="title_more"><a href="#" 年级动态">更多>></a></li>
+						</ul>
+						<ul class="news_box_c">
+
+
+							<li class="news_box_img">
+								<img src="img/2020112453753117.jpg" />
+								<h5><a href="#" title="品千古美文相伴经典，诵中华文章诗意校园">品千古美文相伴经典，诵…</a></h5>
+								<p>诵读诗文经典，让优秀的民族精神在我们血脉中流淌，让民族文化智慧支撑我们人格的脊梁。本次诗歌朗诵比赛展现了学生的…</p>
+							</li>
+
+
+
+							<li class="news_box_cc"><a href="#" title="品千古美文相伴经典，诵中华文章诗意校园">[高一年级组]
+									品千古美文相伴经典，诵中华文章诗意校园</a></li>
+							<li class="news_box_cc"><a href="#" title="我校召开高一年级家长会">[高一年级组] 我校召开高一年级家长会</a></li>
+							<li class="news_box_cc"><a href="#" title="我校召开二年级家长会">[高二年级组] 我校召开高二年级家长会</a></li>
+							<li class="news_box_cc"><a href="#" title="我校召开高三年级家长会">[高三年级组] 我校召开高三年级家长会</a></li>
+
+							<li class="news_box_cc"><a href="#" title="我校召开新生欢迎大会">[高一年级组] 我校召开高一年级新生欢迎大会</a></li>
+							<li class="news_box_cc"><a href="#" title="高考再见！随州一中致高考学生和家长的一封信">[高三年级组]
+									高考再见！随州一中致高考学生和家长的一封信</a></li>
+
+						</ul>
+					</div>
+
+					<div class="news_box">
+						<ul class="title_box">
+							<li class="title_h3">后勤服务</li>
+							<li class="title_more"><a href="#" title="后勤服务">更多>></a></li>
+						</ul>
+						<ul class="news_box_c">
+
+
+							<li class="news_box_img">
+								<img src="img/2020070340864533.jpg" />
+								<h5><a href="#" title="湖北省市场监管局发布中高考期间餐饮食品安全消费提示">湖北省市场监管局发布中…</a></h5>
+								<p>2020年中、高考临近，时值湖北梅雨时节持续高温高湿，微生物滋生蔓延较快，蛋白质和碳水化合物含量高的食物极易腐败变…</p>
+							</li>
+
+							<li class="news_box_cc"><a href="#" title="湖北省市场监管局发布宿舍安全管理提示">[后勤服务]
+									湖北省市场监管局发布宿舍安全管理提示…</a></li>
+							<li class="news_box_cc"><a href="#" title="湖北省市场监管局发布餐饮食品安全消费提示">[后勤服务]
+									湖北省市场监管局发布餐饮食品安全消费提示…</a></li>
+							<li class="news_box_cc"><a href="#" title="湖北省市场监管局发布学校安全用电提示">[后勤服务]
+									湖北省市场监管局发布学校安全用电提示…</a></li>
+							<li class="news_box_cc"><a href="#" title="湖北省市场监管局发布学校教师执勤安全提示">[后勤服务]
+									湖北省市场监管局发布学校教师执勤安全提示…</a></li>
+							<li class="news_box_cc"><a href="#" title="湖北省市场监管局发布中高考期间餐饮食品安全消费提示">[后勤服务]
+									湖北省市场监管局发布中高考期间餐饮食品安全消…</a></li>
+							<li class="news_box_cc"><a href="#" title="服务  规范  放心  满意">[后勤服务]
+									服务&nbsp;&nbsp;规范&nbsp;&nbsp;放心&nbsp;&nbsp;满意</a></li>
+
+						</ul>
+					</div>
+
+				</div>
+				<div style="margin-top: -15px;margin-bottom: 10px;" class="i_ad">
+
+					<a href="#" title="第二条广告"><img src="img/banner02.jpg" width="1200" height="120" /></a>
+
+				</div>
+			</div>
+			<div class="main_e0">
+				<div class="footlink list-unstyled">
+					<div class="footlink_box" style="border:none;">
+						<h5><a class="text-dark" href="#" title="学校概况">学校概况</a></h5>
+
+						<li><a class="text-dark font_small" href="#">学校简介</a></li>
+						<li><a class="text-dark font_small" href="#">学校沿革</a></li>
+						<li><a class="text-dark font_small" href="#">历任领导</a></li>
+						<li><a class="text-dark font_small" href="#">现任领导</a></li>
+						<li><a class="text-dark font_small" href="#">组织机构</a></li>
+						<li><a class="text-dark font_small" href="#">校园风光</a></li>
+
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="新闻头条">新闻头条</a></h5>
+						<li><a class="text-dark font_small" href="#">今日随州</a></li>
+						<li><a class="text-dark font_small" href="#">湖北高中</a></li>
+						<li><a class="text-dark font_small" href="#">随州一中</a></li>
+
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="党建政务">党建政务</a></h5>
+						<li><a class="text-dark font_small" href="#">党建工作</a></li>
+						<li><a class="text-dark font_small" href="#">政务公开</a></li>
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="师资队伍">师资队伍</a></h5>
+						<li><a class="text-dark font_small" href="#">师资介绍</a></li>
+						<li><a class="text-dark font_small" href="#">湖北名师</a></li>
+						<li><a class="text-dark font_small" href="#">特级教师</a></li>
+						<li><a class="text-dark font_small" href="#">湖北省学科带头人</a></li>
+						<li><a class="text-dark font_small" href="#">随州市学科带头人</a></li>
+						<li><a class="text-dark font_small" href="#">随州市骨干老师</a></li>
+						<li><a class="text-dark font_small" href="#">青年老师风采</a></li>
+
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="教学教研">教学教研</a></h5>
+
+						<li><a class="text-dark font_small" href="#">教学前沿</a></li>
+
+						<li><a class="text-dark font_small" href="#">教务动态</a></li>
+
+						<li><a class="text-dark font_small" href="#">学科建设</a></li>
+
+						<li><a class="text-dark font_small" href="#">教师论文</a></li>
+
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="名师工作室">名师工作室</a></h5>
+
+						<li><a class="text-dark font_small" href="#">名师工作室简介</a></li>
+
+						<li><a class="text-dark font_small" href="#">名师工作室活动</a></li>
+
+						<li><a class="text-dark font_small" href="#">名师工作室成果</a></li>
+
+						<li><a class="text-dark font_small" href="#">名师工作室资源</a></li>
+
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="德育天地">德育天地</a></h5>
+
+						<li><a class="text-dark font_small" href="#">校纪校规</a></li>
+
+						<li><a class="text-dark font_small" href="#">团委工作</a></li>
+
+						<li><a class="text-dark font_small" href="#">班主任风采</a></li>
+
+						<li><a class="text-dark font_small" href="#">国旗下的讲话</a></li>
+
+						<li><a class="text-dark font_small" href="#">心灵港湾</a></li>
+
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="年级动态">年级动态</a></h5>
+
+						<li><a class="text-dark font_small" href="#">高一年级组</a></li>
+
+						<li><a class="text-dark font_small" href="#">高二年级组</a></li>
+
+						<li><a class="text-dark font_small" href="#">高三年级组</a></li>
+
+					</div>
+					<div class="footlink_box">
+						<h5><a class="text-dark" href="#" title="招生招聘">招生招聘</a></h5>
+
+						<li><a class="text-dark font_small" href="#">招生毕业</a></li>
+
+						<li><a class="text-dark font_small" href="#">教师招聘</a></li>
+
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="main">
+					<div class="copycon">湖北省随州市擂鼓墩大道随州一中 邮编：441300<br />
+						网站管理：信息技术部 邮箱：hbszyz@hbszyz.com(仅限网站交流)</div>
+					<div class="copyicp">工信部备案：鄂ICP备05010801号</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+</body>
+
+</html>
